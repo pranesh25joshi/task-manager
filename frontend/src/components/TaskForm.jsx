@@ -109,18 +109,17 @@ export default function TaskForm({ task, onClose, onSave }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
-      {/* Backdrop */}
       <div 
         className="fixed inset-0 bg-text-main/20 backdrop-blur-sm transition-opacity"
         onClick={onClose}
       ></div>
 
-      {/* Modal */}
+
       <div className="relative w-full max-w-lg transform overflow-hidden rounded-2xl bg-card-light shadow-earthy transition-all border border-white/20 max-h-[90vh] flex flex-col">
         {/* Decorative Blob */}
         <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
 
-        {/* Header */}
+
         <div className="px-6 py-5 border-b border-border-light flex items-center justify-between relative shrink-0">
           <h2 className="text-xl font-bold text-text-main">
             {task ? 'Edit Task' : 'Create New Task'}
@@ -133,7 +132,7 @@ export default function TaskForm({ task, onClose, onSave }) {
           </button>
         </div>
 
-        {/* Form */}
+
         <form onSubmit={handleSubmit} className="flex flex-col flex-1 min-h-0">
           <div className="px-6 py-6 space-y-5 overflow-y-auto flex-1">{error && (
               <div className="p-3 rounded-lg bg-red-50 border border-red-200 text-red-600 text-sm">
@@ -141,7 +140,7 @@ export default function TaskForm({ task, onClose, onSave }) {
               </div>
             )}
 
-            {/* Task Title */}
+
             <div className="space-y-1.5">
               <label className="block text-sm font-semibold text-text-main" htmlFor="task-title">
                 Task Title
@@ -157,7 +156,7 @@ export default function TaskForm({ task, onClose, onSave }) {
               />
             </div>
 
-            {/* Description */}
+
             <div className="space-y-1.5">
               <label className="block text-sm font-semibold text-text-main" htmlFor="task-desc">
                 Description
@@ -173,9 +172,9 @@ export default function TaskForm({ task, onClose, onSave }) {
               ></textarea>
             </div>
 
-            {/* Due Date & Priority */}
+
             <div className="grid grid-cols-2 gap-5">
-              {/* Due Date */}
+
               <div className="space-y-1.5">
                 <label className="block text-sm font-semibold text-text-main" htmlFor="task-date">
                   Due Date
@@ -195,7 +194,7 @@ export default function TaskForm({ task, onClose, onSave }) {
                 </div>
               </div>
 
-              {/* Priority Level */}
+
               <div className="space-y-1.5">
                 <label className="block text-sm font-semibold text-text-main">
                   Priority Level
@@ -204,7 +203,7 @@ export default function TaskForm({ task, onClose, onSave }) {
                   <select
                     value={formData.priority}
                     onChange={(e) => setFormData({ ...formData, priority: e.target.value })}
-                    className="block w-full rounded-xl border-border-light bg-white/50 text-text-main shadow-sm focus:border-primary focus:ring-primary sm:text-sm py-2.5 px-4 appearance-none"
+                    className="block w-full rounded-xl border-border-light bg-white/50 text-text-main shadow-sm focus:border-primary focus:ring-primary sm:text-sm py-2.5 px-3 appearance-none"
                     disabled={loading}
                   >
                     <option value="low">Low</option>
@@ -218,7 +217,7 @@ export default function TaskForm({ task, onClose, onSave }) {
               </div>
             </div>
 
-            {/* Status (only show when editing) */}
+
             {task && (
               <div className="space-y-1.5">
                 <label className="block text-sm font-semibold text-text-main">
@@ -241,7 +240,7 @@ export default function TaskForm({ task, onClose, onSave }) {
               </div>
             )}
 
-            {/* Assign Users */}
+
             <div className="space-y-1.5">
               <label className="block text-sm font-semibold text-text-main">
                 Assign To
@@ -280,7 +279,7 @@ export default function TaskForm({ task, onClose, onSave }) {
             </div>
           </div>
 
-          {/* Footer */}
+
           <div className="px-6 py-4 bg-background-light/50 border-t border-border-light flex justify-end gap-3 shrink-0">
             <button
               type="button"
