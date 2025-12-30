@@ -1,0 +1,70 @@
+@import "tailwindcss/theme" layer(theme);
+@import "tailwindcss/preflight" layer(base);
+@import "tailwindcss/utilities" layer(utilities);
+
+@layer theme {
+  @theme {
+    --color-primary: #A05A2C;
+    --color-primary-hover: #824822;
+    --color-background-light: #F5F2EB;
+    --color-background-dark: #1a1614;
+    --color-card-light: #FFFCF9;
+    --color-card-dark: #2b2623;
+    --color-card-hover-light: #FDF6F0;
+    --color-card-hover-dark: #36302c;
+    --color-border-light: #E3DDD1;
+    --color-border-dark: #4a4440;
+    --color-text-main: #423429;
+    --color-text-muted: #8f847a;
+    --color-input-bg: #FFFFFF;
+    --color-input-bg-dark: #221e1c;
+    --color-priority-high: #C25E45;
+    --color-priority-med: #D4A353;
+    --color-priority-low: #7FA07B;
+
+    --font-display: "DM Sans", sans-serif;
+
+    --radius-xl: 1rem;
+    --radius-2xl: 1.25rem;
+    --radius-3xl: 1.5rem;
+
+    --shadow-earthy: 0 20px 40px -12px rgba(66, 52, 41, 0.08);
+    --shadow-card: 0 4px 6px -1px rgba(66, 52, 41, 0.05), 0 2px 4px -1px rgba(66, 52, 41, 0.03);
+    --shadow-floating: 0 10px 15px -3px rgba(66, 52, 41, 0.08), 0 4px 6px -2px rgba(66, 52, 41, 0.04);
+    --shadow-input: 0 1px 2px 0 rgba(66, 52, 41, 0.05);
+  }
+}
+
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+::selection {
+  background-color: #A05A2C;
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d6d3d1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a29e;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
